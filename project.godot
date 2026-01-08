@@ -13,12 +13,11 @@ config_version=5
 config/name="Isometric main Git✅"
 run/main_scene="uid://bsdq3kg5j4sud"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=840
-window/size/viewport_height=580
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
 
 [input]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjtjeraiyn5oy"]
+
+[ext_resource type="Texture2D" uid="uid://bciobgp768vvc" path="res://AllTiles/png/Spritesheet/tree.png" id="1_brfkd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uc1xx"]
+radius = 6.0
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0.15134907, -12.161152)
+scale = Vector2(1.0094593, 1.114928)
+texture = ExtResource("1_brfkd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.30269623, 0)
+shape = SubResource("CircleShape2D_uc1xx")

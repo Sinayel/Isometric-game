@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsu4tmiikosaw"]
+
+[ext_resource type="Texture2D" uid="uid://cdl3ty84lpup2" path="res://AllTiles/nodes/streetlight.png" id="1_esn11"]
+[ext_resource type="Texture2D" uid="uid://iul6fn3lk1q8" path="res://AllTiles/Tiles/a5bbfead133882d0a9f4c14a092c97be9cbbf5a3.png" id="2_8wa4x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_asdig"]
+radius = 2.0
+height = 14.0
+
+[node name="Streelight" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1, -13)
+texture = ExtResource("1_esn11")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("CapsuleShape2D_asdig")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(2.3841858e-07, -18)
+scale = Vector2(0.080566406, 0.08984375)
+color = Color(1, 0.75686276, 1, 1)
+texture = ExtResource("2_8wa4x")
