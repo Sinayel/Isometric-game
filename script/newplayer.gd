@@ -9,6 +9,7 @@ const speed := 60.0
 
 var is_attacking := false
 var last_dir: Vector2 = Vector2.RIGHT
+var cutting: int = 0
 
 func _ready() -> void:
 	anim.animation_finished.connect(_on_anim_finished)
@@ -61,6 +62,12 @@ func _on_anim_finished() -> void:
 func _on_attack_area_body_entered(body: Node) -> void:
 	if is_attacking and body.is_in_group("enemies"):
 		print("Touche :", body.name)
-		body.take_damage()
-
+		body.take_damage(1)
+	
+	if is_attacking and body.is_in_group("tree"):
+		cutting+=1
+		if cutting == 3:
+			print("arbre casser !")
+			body.take_damage(0)
+			cutting = 0
 		

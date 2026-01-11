@@ -44,8 +44,9 @@ func _physics_process(delta: float) -> void:
 	if !anim.is_playing() or anim.animation != "walk":
 		anim.play("walk")
 
-func take_damage():
-	queue_free()
+func take_damage(i: int):
+	if i == 1:
+		queue_free()
 
 func _pick_new_direction() -> void:
 	var r := randi_range(0, 2)

@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjtjeraiyn5oy"]
+[gd_scene load_steps=4 format=3 uid="uid://cjtjeraiyn5oy"]
 
 [ext_resource type="Texture2D" uid="uid://bciobgp768vvc" path="res://AllTiles/png/Spritesheet/tree.png" id="1_brfkd"]
+[ext_resource type="Script" uid="uid://odjmuqkgv2y4" path="res://script/tree.gd" id="1_vplca"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uc1xx"]
 radius = 6.0
 
-[node name="Tree" type="StaticBody2D"]
+[node name="Tree" type="CharacterBody2D"]
+script = ExtResource("1_vplca")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
