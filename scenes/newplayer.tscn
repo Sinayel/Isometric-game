@@ -1,9 +1,11 @@
-[gd_scene load_steps=49 format=3 uid="uid://bncnbri8loo6a"]
+[gd_scene load_steps=51 format=3 uid="uid://bncnbri8loo6a"]
 
 [ext_resource type="Script" uid="uid://c1l3lok7q8gc0" path="res://script/newplayer.gd" id="1_f56wh"]
 [ext_resource type="Texture2D" uid="uid://y4h85xypdkg4" path="res://AllTiles/png/Soldier-Attack02.png" id="1_s7jcv"]
+[ext_resource type="Resource" uid="uid://djiomtlv5rngl" path="res://inventory/playerinv.tres" id="2_a756b"]
 [ext_resource type="Texture2D" uid="uid://bfhf2g22pygop" path="res://AllTiles/png/Small-8-Direction-Characters_by_AxulArt.png" id="2_f56wh"]
 [ext_resource type="Texture2D" uid="uid://ddfll168gn1eg" path="res://AllTiles/png/Soldier-Walk.png" id="3_1veou"]
+[ext_resource type="PackedScene" uid="uid://7tdibn0ckf7c" path="res://inventory/inv_ui.tscn" id="6_qv6ja"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1jxqw"]
 atlas = ExtResource("1_s7jcv")
@@ -481,8 +483,8 @@ radius = 2.9936254
 height = 5.987251
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ki1dg"]
-radius = 1.9988298
-height = 3.9976597
+radius = 3.7478073
+height = 7.4956145
 
 [sub_resource type="Animation" id="Animation_bbery"]
 length = 0.001
@@ -505,10 +507,10 @@ tracks/1/path = NodePath("AttackPivot/AttackArea/CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.0009999999),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(7, -11)]
+"values": [Vector2(-1.4305115e-06, 9.536743e-07), Vector2(0, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -561,8 +563,8 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_h4v8g"]
 resource_name = "attack"
-length = 0.7500125
-step = 0.14285715
+length = 0.6667
+step = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -570,7 +572,7 @@ tracks/0/path = NodePath("AnimationPlayer:speed_scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.125),
+"times": PackedFloat32Array(0.024999991),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [1.0]
@@ -582,10 +584,10 @@ tracks/1/path = NodePath("AttackPivot/AttackArea/CollisionShape2D:position")
 tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.21428572, 0.256739, 0.71428573),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.11428571, 0.15673898, 0.21999998, 0.5766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(5.9999995, -4.999999), Vector2(12, 6), Vector2(12, 6), Vector2(0, 4)]
+"values": [Vector2(-4.7683716e-07, 4.7683716e-07), Vector2(12, 6), Vector2(12, 6), Vector2(14, 5), Vector2(0, 4)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -594,7 +596,7 @@ tracks/2/path = NodePath("AttackPivot/AttackArea/CollisionShape2D:rotation")
 tracks/2/interp = 0
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.21428572, 0.256739, 0.39325893),
+"times": PackedFloat32Array(0, 0.11428571, 0.15673898, 0.2932589),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [-0.021302491, 1.5365971, 1.5365971, 1.5365971]
@@ -606,7 +608,7 @@ tracks/3/path = NodePath("AnimatedSprite2D:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.7500125),
+"times": PackedFloat32Array(0, 0.024999991, 0.14999999, 0.27499998, 0.39999998, 0.5600125),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
@@ -618,10 +620,10 @@ tracks/4/path = NodePath("AttackPivot/AttackArea/CollisionShape2D:scale")
 tracks/4/interp = 0
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.2857143, 0.71428573),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.18571429, 0.21999998, 0.52428573),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1, 4), Vector2(0.5, 0.78)]
+"values": [Vector2(1, 1), Vector2(1, 4), Vector2(1, 4), Vector2(0.5, 0.78)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -630,7 +632,7 @@ tracks/5/path = NodePath("CollisionShape2D:position")
 tracks/5/interp = 0
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.146708, 0.29545358, 0.6479603),
+"times": PackedFloat32Array(0, 0.046707988, 0.19545357, 0.4579603),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1.9181008e-09, -5.9604645e-08), Vector2(2.0000002, -2.0000002), Vector2(-3.5762787e-07, 4.000001), Vector2(5.71859e-10, 4.0000005)]
@@ -642,8 +644,9 @@ _data = {
 &"attack": SubResource("Animation_h4v8g")
 }
 
-[node name="Newplayer" type="CharacterBody2D" groups=["tree"]]
+[node name="Newplayer" type="CharacterBody2D"]
 script = ExtResource("1_f56wh")
+inv = ExtResource("2_a756b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, 0)
@@ -665,7 +668,7 @@ shape = SubResource("CapsuleShape2D_h4v8g")
 [node name="AttackArea" type="Area2D" parent="AttackPivot"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackPivot/AttackArea"]
-position = Vector2(7, -11)
+position = Vector2(-1.4305115e-06, 9.536743e-07)
 rotation = -0.021302491
 shape = SubResource("CapsuleShape2D_ki1dg")
 
@@ -673,3 +676,9 @@ shape = SubResource("CapsuleShape2D_ki1dg")
 libraries = {
 &"": SubResource("AnimationLibrary_a756b")
 }
+
+[node name="Inv_Ui" parent="." instance=ExtResource("6_qv6ja")]
+offset_left = -29.0
+offset_top = -61.0
+offset_right = 28.0
+offset_bottom = -19.0

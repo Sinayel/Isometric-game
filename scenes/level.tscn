@@ -1,0 +1,201 @@
+[gd_scene load_steps=9 format=3 uid="uid://bsdq3kg5j4sud"]
+
+[ext_resource type="PackedScene" uid="uid://cd4fjqpjb6xpu" path="res://scenes/world.tscn" id="1_ho4o2"]
+[ext_resource type="PackedScene" uid="uid://bncnbri8loo6a" path="res://scenes/newplayer.tscn" id="2_f8a81"]
+[ext_resource type="PackedScene" uid="uid://cjtjeraiyn5oy" path="res://scenes/tree.tscn" id="3_kaip4"]
+[ext_resource type="PackedScene" uid="uid://dsu4tmiikosaw" path="res://scenes/streelight.tscn" id="4_cib7u"]
+[ext_resource type="PackedScene" uid="uid://2bga7wu1e6u1" path="res://scenes/enemie.tscn" id="5_f8a81"]
+[ext_resource type="PackedScene" uid="uid://dr24wbvghy2u4" path="res://scenes/stick_collectable.tscn" id="6_2r41h"]
+[ext_resource type="PackedScene" uid="uid://b3l5u4f4ad5go" path="res://scenes/cloud.tscn" id="7_klq6b"]
+[ext_resource type="PackedScene" uid="uid://3rxe6boyowta" path="res://scenes/changed_scene.tscn" id="8_b121j"]
+
+[node name="Level" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(-2, -7)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -632.0
+offset_top = -580.0
+offset_right = 580.0
+offset_bottom = 540.0
+color = Color(0.51836956, 0.7976974, 0.9976602, 1)
+metadata/_edit_lock_ = true
+
+[node name="World" parent="." instance=ExtResource("1_ho4o2")]
+z_index = -1
+position = Vector2(-50, -9)
+metadata/_edit_lock_ = true
+
+[node name="Newplayer" parent="." instance=ExtResource("2_f8a81")]
+position = Vector2(-5, 19)
+
+[node name="AllEnnemies" type="Node2D" parent="."]
+
+[node name="enemie" parent="AllEnnemies" instance=ExtResource("5_f8a81")]
+position = Vector2(22, -61)
+
+[node name="enemie3" parent="AllEnnemies" instance=ExtResource("5_f8a81")]
+position = Vector2(49, -42)
+
+[node name="enemie4" parent="AllEnnemies" instance=ExtResource("5_f8a81")]
+position = Vector2(51, -82)
+
+[node name="enemie2" parent="AllEnnemies" instance=ExtResource("5_f8a81")]
+position = Vector2(82, -60)
+
+[node name="AllTree" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Tree2" parent="AllTree" instance=ExtResource("3_kaip4")]
+position = Vector2(-1, -63)
+
+[node name="Tree3" parent="AllTree" instance=ExtResource("3_kaip4")]
+position = Vector2(103, -40)
+
+[node name="Tree4" parent="AllTree" instance=ExtResource("3_kaip4")]
+position = Vector2(78, 4)
+
+[node name="Tree5" parent="AllTree" instance=ExtResource("3_kaip4")]
+position = Vector2(26, 66)
+
+[node name="Tree6" parent="AllTree" instance=ExtResource("3_kaip4")]
+position = Vector2(46, -145)
+
+[node name="Tree7" parent="AllTree" instance=ExtResource("3_kaip4")]
+position = Vector2(85, -88)
+
+[node name="AllStreetlight" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Streelight" parent="AllStreetlight" instance=ExtResource("4_cib7u")]
+position = Vector2(-5, -11)
+
+[node name="Streelight2" parent="AllStreetlight" instance=ExtResource("4_cib7u")]
+position = Vector2(9, 22)
+
+[node name="Streelight3" parent="AllStreetlight" instance=ExtResource("4_cib7u")]
+position = Vector2(33, -96)
+
+[node name="Streelight4" parent="AllStreetlight" instance=ExtResource("4_cib7u")]
+position = Vector2(2, 77)
+
+[node name="AllStick" type="Node2D" parent="."]
+
+[node name="stick_collectable" parent="AllStick" instance=ExtResource("6_2r41h")]
+position = Vector2(-20, -54)
+
+[node name="stick_collectable3" parent="AllStick" instance=ExtResource("6_2r41h")]
+position = Vector2(111, 7)
+
+[node name="stick_collectable2" parent="AllStick" instance=ExtResource("6_2r41h")]
+position = Vector2(28, 10)
+
+[node name="stick_collectable5" parent="AllStick" instance=ExtResource("6_2r41h")]
+position = Vector2(-111, -15)
+
+[node name="stick_collectable6" parent="AllStick" instance=ExtResource("6_2r41h")]
+position = Vector2(-14, 93)
+
+[node name="AllCloud" type="Node2D" parent="."]
+rotation = 0.007241618
+
+[node name="cloud" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(209, -8)
+rotation = -0.04558249
+
+[node name="cloud3" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(173, 46)
+rotation = 0.11279319
+
+[node name="cloud4" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(-124, -152)
+rotation = -0.06800714
+
+[node name="cloud11" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(-52, -204)
+rotation = 0.14594832
+
+[node name="cloud12" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(113, -217)
+rotation = 0.13655643
+
+[node name="cloud13" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(22, -244)
+rotation = 0.08908851
+
+[node name="cloud14" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(218, -158)
+rotation = -0.10558374
+
+[node name="cloud5" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(-127, -100)
+rotation = 0.11927236
+
+[node name="cloud15" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(-251, -106)
+rotation = -0.10502491
+
+[node name="cloud16" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(-293, -51)
+rotation = 0.306425
+
+[node name="cloud17" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(-193, -193)
+rotation = 0.15064707
+
+[node name="cloud18" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(-302, 61)
+rotation = 0.15064707
+
+[node name="cloud19" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(-217, 182)
+rotation = 0.15064707
+
+[node name="cloud20" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(33, 207)
+rotation = 0.15064707
+
+[node name="cloud21" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(282, 53)
+rotation = 0.15064707
+
+[node name="cloud22" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(294, -96)
+rotation = 0.15064707
+
+[node name="cloud23" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(250, -261)
+rotation = 0.15064707
+
+[node name="cloud24" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(112, -321)
+
+[node name="cloud25" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(-85, -302)
+rotation = 0.019362252
+
+[node name="cloud6" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(-201, -23)
+rotation = -0.13159671
+
+[node name="cloud7" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(-198, 99)
+
+[node name="cloud9" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(88, 146)
+rotation = -0.107594416
+
+[node name="cloud10" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(210, 124)
+rotation = 0.09952068
+
+[node name="cloud8" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(-81, 170)
+
+[node name="cloud2" parent="AllCloud" instance=ExtResource("7_klq6b")]
+position = Vector2(156, -70)
+
+[node name="changed_scene" parent="." instance=ExtResource("8_b121j")]
+position = Vector2(-25, 48)
+target_scene = "uid://de5gqavnidgdw"

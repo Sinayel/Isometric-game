@@ -7,10 +7,15 @@ extends CharacterBody2D
 @export var max_dir_time: float = 2.5
 @export var smooth_factor: float = 4.0
 
+@export var item: InvItem
+var player: CharacterBody2D = null
+
 var current_dir: Vector2 = Vector2.ZERO
 var time_left: float = 0.0
 
 func _ready() -> void:
+	add_to_group("player")
+	player = get_tree().get_first_node_in_group("player")
 	randomize()
 	_pick_new_direction()
 
@@ -44,9 +49,9 @@ func _physics_process(delta: float) -> void:
 	if !anim.is_playing() or anim.animation != "walk":
 		anim.play("walk")
 
-func take_damage(i: int):
-	if i == 1:
-		queue_free()
+func take_damage(player) -> void:
+	player.collect(item)
+	queue_free()
 
 func _pick_new_direction() -> void:
 	var r := randi_range(0, 2)
