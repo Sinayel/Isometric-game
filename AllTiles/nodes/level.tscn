@@ -10,11 +10,6 @@
 y_sort_enabled = true
 position = Vector2(-2, -7)
 
-[node name="World" parent="." instance=ExtResource("1_ho4o2")]
-z_index = -1
-position = Vector2(-50, -9)
-metadata/_edit_lock_ = true
-
 [node name="Newplayer" parent="." instance=ExtResource("2_f8a81")]
 position = Vector2(-5, 19)
 
@@ -49,10 +44,15 @@ y_sort_enabled = true
 position = Vector2(-5, -11)
 
 [node name="Streelight2" parent="AllStreetlight" instance=ExtResource("4_cib7u")]
-position = Vector2(9, 22)
+position = Vector2(10, 20)
 
 [node name="Streelight3" parent="AllStreetlight" instance=ExtResource("4_cib7u")]
 position = Vector2(33, -96)
 
 [node name="Streelight4" parent="AllStreetlight" instance=ExtResource("4_cib7u")]
 position = Vector2(2, 77)
+
+[node name="World" parent="." instance=ExtResource("1_ho4o2")]
+z_index = -2
+position = Vector2(-50, -9)
+metadata/_edit_lock_ = true

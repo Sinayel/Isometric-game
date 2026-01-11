@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dr24wbvghy2u4"]
+
+[ext_resource type="Script" uid="uid://cn1wcnjau87fq" path="res://stick_collectable.gd" id="1_m43rf"]
+[ext_resource type="Resource" uid="uid://358e0bmkobtl" path="res://inventory/items/stick.tres" id="2_gne4f"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m43rf"]
+load_path = "res://.godot/imported/stick-icon.png-5b6ea52b85a2d3c67749246c355764e2.ctex"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gne4f"]
+radius = 16.0
+height = 32.0
+
+[node name="stick_collectable" type="StaticBody2D"]
+script = ExtResource("1_m43rf")
+item = ExtResource("2_gne4f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CompressedTexture2D_m43rf")
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("CapsuleShape2D_gne4f")
+
+[connection signal="body_entered" from="InteractArea" to="." method="_on_interacteble_area_body_entered"]

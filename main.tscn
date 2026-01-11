@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=3 uid="uid://bj3taa7rrf8a8"]
+
+[ext_resource type="PackedScene" uid="uid://cd4fjqpjb6xpu" path="res://scenes/world.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://2bga7wu1e6u1" path="res://scenes/enemie.tscn" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bncnbri8loo6a" path="res://scenes/newplayer.tscn" id="3_7mycd"]
+[ext_resource type="PackedScene" uid="uid://dsu4tmiikosaw" path="res://scenes/streelight.tscn" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://cjtjeraiyn5oy" path="res://scenes/tree.tscn" id="5_5vw27"]
+
+[node name="Main" type="Node2D"]
+
+[node name="World" parent="." instance=ExtResource("1_ig7tw")]
+metadata/_edit_lock_ = true
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="enemie" parent="Enemies" instance=ExtResource("2_lquwl")]
+position = Vector2(78, -63)
+
+[node name="enemie2" parent="Enemies" instance=ExtResource("2_lquwl")]
+position = Vector2(146, -12)
+
+[node name="enemie3" parent="Enemies" instance=ExtResource("2_lquwl")]
+position = Vector2(73, -20)
+
+[node name="enemie4" parent="Enemies" instance=ExtResource("2_lquwl")]
+position = Vector2(29, -7)
+
+[node name="enemie5" parent="Enemies" instance=ExtResource("2_lquwl")]
+position = Vector2(89, 0)
+
+[node name="enemie6" parent="Enemies" instance=ExtResource("2_lquwl")]
+position = Vector2(55, -43)
+
+[node name="enemie7" parent="Enemies" instance=ExtResource("2_lquwl")]
+position = Vector2(109, -89)
+
+[node name="enemie8" parent="Enemies" instance=ExtResource("2_lquwl")]
+position = Vector2(62, -89)
+
+[node name="Newplayer" parent="." instance=ExtResource("3_7mycd")]
+position = Vector2(17, 48)
+
+[node name="Streetlight" type="Node2D" parent="."]
+y_sort_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="Streelight2" parent="Streetlight" instance=ExtResource("4_272bh")]
+position = Vector2(121, -57)
+
+[node name="Streelight3" parent="Streetlight" instance=ExtResource("4_272bh")]
+position = Vector2(24, 47)
+
+[node name="Streelight" parent="Streetlight" instance=ExtResource("4_272bh")]
+position = Vector2(70, 25)
+
+[node name="Tree" type="Node2D" parent="."]
+y_sort_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="Tree2" parent="Tree" instance=ExtResource("5_5vw27")]
+position = Vector2(43, -57)
+
+[node name="Tree3" parent="Tree" instance=ExtResource("5_5vw27")]
+position = Vector2(109, -17)
+
+[node name="Tree4" parent="Tree" instance=ExtResource("5_5vw27")]
+position = Vector2(8, 52)
+
+[node name="Tree" parent="Tree" instance=ExtResource("5_5vw27")]
+position = Vector2(144, -127)
