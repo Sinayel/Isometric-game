@@ -22,12 +22,12 @@ offset_bottom = 540.0
 color = Color(0.51836956, 0.7976974, 0.9976602, 1)
 metadata/_edit_lock_ = true
 
-[node name="World" parent="." instance=ExtResource("1_ho4o2")]
+[node name="Hub" parent="." instance=ExtResource("1_ho4o2")]
 z_index = -1
 position = Vector2(-50, -9)
 metadata/_edit_lock_ = true
 
-[node name="Newplayer" parent="." instance=ExtResource("2_f8a81")]
+[node name="Player" parent="." instance=ExtResource("2_f8a81")]
 position = Vector2(-5, 19)
 
 [node name="AllEnnemies" type="Node2D" parent="."]
@@ -36,7 +36,7 @@ position = Vector2(-5, 19)
 position = Vector2(22, -61)
 
 [node name="enemie3" parent="AllEnnemies" instance=ExtResource("5_f8a81")]
-position = Vector2(49, -42)
+position = Vector2(52, -42)
 
 [node name="enemie4" parent="AllEnnemies" instance=ExtResource("5_f8a81")]
 position = Vector2(51, -82)
@@ -197,5 +197,5 @@ position = Vector2(-81, 170)
 position = Vector2(156, -70)
 
 [node name="changed_scene" parent="." instance=ExtResource("8_b121j")]
-position = Vector2(-25, 48)
+position = Vector2(-79, 43)
 target_scene = "uid://de5gqavnidgdw"

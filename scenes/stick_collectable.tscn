@@ -15,6 +15,7 @@ script = ExtResource("1_m43rf")
 item = ExtResource("2_gne4f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.156806
 texture = SubResource("CompressedTexture2D_m43rf")
 
 [node name="InteractArea" type="Area2D" parent="."]

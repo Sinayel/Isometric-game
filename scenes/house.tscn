@@ -241,7 +241,7 @@ tile_set = SubResource("TileSet_f74lx")
 tile_map_data = PackedByteArray("AAAEAB4AAAAAAAAAABAKAB0AAAAAAAAAAAAKABEAAAAAAAAAABADABkAAAAAAAAAAHA=")
 tile_set = SubResource("TileSet_ptc3g")
 
-[node name="Newplayer" parent="." instance=ExtResource("6_f74lx")]
+[node name="Player" parent="." instance=ExtResource("6_f74lx")]
 position = Vector2(90, 21)
 
 [node name="changed_scene" parent="." instance=ExtResource("7_ptc3g")]
