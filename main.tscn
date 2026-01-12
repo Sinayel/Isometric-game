@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cd4fjqpjb6xpu" path="res://scenes/world.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://2bga7wu1e6u1" path="res://scenes/enemie.tscn" id="2_lquwl"]
-[ext_resource type="PackedScene" uid="uid://bncnbri8loo6a" path="res://scenes/newplayer.tscn" id="3_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bncnbri8loo6a" path="res://scenes/Player.tscn" id="3_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dsu4tmiikosaw" path="res://scenes/streelight.tscn" id="4_272bh"]
 [ext_resource type="PackedScene" uid="uid://cjtjeraiyn5oy" path="res://scenes/tree.tscn" id="5_5vw27"]
 

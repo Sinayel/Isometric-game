@@ -1,17 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://bsdq3kg5j4sud"]
+[gd_scene load_steps=10 format=3 uid="uid://3t2t607sstg6"]
 
+[ext_resource type="Script" uid="uid://bpfxvdce2d0pq" path="res://script/level.gd" id="1_8c41q"]
 [ext_resource type="PackedScene" uid="uid://cd4fjqpjb6xpu" path="res://scenes/world.tscn" id="1_ho4o2"]
-[ext_resource type="PackedScene" uid="uid://bncnbri8loo6a" path="res://scenes/newplayer.tscn" id="2_f8a81"]
+[ext_resource type="PackedScene" uid="uid://bncnbri8loo6a" path="res://scenes/Player.tscn" id="2_f8a81"]
 [ext_resource type="PackedScene" uid="uid://cjtjeraiyn5oy" path="res://scenes/tree.tscn" id="3_kaip4"]
 [ext_resource type="PackedScene" uid="uid://dsu4tmiikosaw" path="res://scenes/streelight.tscn" id="4_cib7u"]
 [ext_resource type="PackedScene" uid="uid://2bga7wu1e6u1" path="res://scenes/enemie.tscn" id="5_f8a81"]
 [ext_resource type="PackedScene" uid="uid://dr24wbvghy2u4" path="res://scenes/stick_collectable.tscn" id="6_2r41h"]
 [ext_resource type="PackedScene" uid="uid://b3l5u4f4ad5go" path="res://scenes/cloud.tscn" id="7_klq6b"]
-[ext_resource type="PackedScene" uid="uid://3rxe6boyowta" path="res://scenes/changed_scene.tscn" id="8_b121j"]
+[ext_resource type="PackedScene" uid="uid://dna7matq735gh" path="res://scenes/teleport_to.tscn" id="9_8c41q"]
 
 [node name="Level" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(-2, -7)
+script = ExtResource("1_8c41q")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -2
@@ -196,6 +198,4 @@ position = Vector2(-81, 170)
 [node name="cloud2" parent="AllCloud" instance=ExtResource("7_klq6b")]
 position = Vector2(156, -70)
 
-[node name="changed_scene" parent="." instance=ExtResource("8_b121j")]
-position = Vector2(-79, 43)
-target_scene = "uid://de5gqavnidgdw"
+[node name="teleport_to" parent="." instance=ExtResource("9_8c41q")]

@@ -11,15 +11,19 @@ config_version=5
 [application]
 
 config/name="Isometric main Git✅"
-run/main_scene="uid://bsdq3kg5j4sud"
+run/main_scene="uid://3t2t607sstg6"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 run/size/window_height_override=1080
 run/size/window_width_override=1920
 
+[autoload]
+
+Level="*res://script/level.gd"
+
 [display]
 
-window/size/window_width_override=1280
-window/size/window_height_override=720
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
 
 [input]
@@ -65,3 +69,4 @@ i={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

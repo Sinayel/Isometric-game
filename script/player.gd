@@ -1,3 +1,5 @@
+class_name Player
+
 extends CharacterBody2D
 
 @export var inv: Inv
@@ -45,12 +47,12 @@ func _physics_process(_delta: float) -> void:
 			attack_pivot.scale.x = -1
 		
 		
-		if !anim.is_playing() or anim.animation != 'walk':
-			anim.play('walk')
+		if !anim.is_playing() or anim.animation != 'walk_player':
+			anim.play('walk_player')
 	else:
-		if anim.sprite_frames and anim.sprite_frames.has_animation('walk_idle'):
-			if !anim.is_playing() or anim.animation != 'walk_idle':
-				anim.play('walk_idle')
+		if anim.sprite_frames and anim.sprite_frames.has_animation('Newplayer'):
+			if !anim.is_playing() or anim.animation != 'Newplayer':
+				anim.play('Newplayer')
 		else:
 			if anim.is_playing():
 				anim.stop()
@@ -66,7 +68,3 @@ func _on_attack_area_body_entered(body: Node) -> void:
 
 func collect(item):
 	inv.insert(item)
-
-func changed_scene(pathScene: String):
-	if pathScene:
-		get_tree().change_scene_to_file(pathScene)
