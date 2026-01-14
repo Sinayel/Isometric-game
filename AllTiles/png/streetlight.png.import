@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bciobgp768vvc"
-path="res://.godot/imported/tree.png-be335384ac4308287b19e3eddc045a2a.ctex"
+uid="uid://b031cep4idi1w"
+path="res://.godot/imported/streetlight.png-97f0fc96c0467d7997281e7defcd49ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AllTiles/png/Spritesheet/tree.png"
-dest_files=["res://.godot/imported/tree.png-be335384ac4308287b19e3eddc045a2a.ctex"]
+source_file="res://AllTiles/png/streetlight.png"
+dest_files=["res://.godot/imported/streetlight.png-97f0fc96c0467d7997281e7defcd49ab.ctex"]
 
 [params]
 

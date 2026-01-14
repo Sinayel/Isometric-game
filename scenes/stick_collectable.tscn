@@ -1,10 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dr24wbvghy2u4"]
 
-[ext_resource type="Script" uid="uid://cn1wcnjau87fq" path="res://stick_collectable.gd" id="1_m43rf"]
+[ext_resource type="Script" uid="uid://cn1wcnjau87fq" path="res://script/stick_collectable.gd" id="1_m43rf"]
 [ext_resource type="Resource" uid="uid://358e0bmkobtl" path="res://inventory/items/stick.tres" id="2_gne4f"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m43rf"]
-load_path = "res://.godot/imported/stick-icon.png-5b6ea52b85a2d3c67749246c355764e2.ctex"
+[ext_resource type="Texture2D" uid="uid://dyh2c5xk0v5ie" path="res://AllTiles/png/stick-icon.png" id="3_nv3jk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gne4f"]
 radius = 16.0
@@ -16,7 +14,7 @@ item = ExtResource("2_gne4f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.156806
-texture = SubResource("CompressedTexture2D_m43rf")
+texture = ExtResource("3_nv3jk")
 
 [node name="InteractArea" type="Area2D" parent="."]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=77 format=3 uid="uid://2bga7wu1e6u1"]
 
 [ext_resource type="Script" uid="uid://clegnf7mwguhu" path="res://script/enemie.gd" id="1_qv21c"]
-[ext_resource type="Resource" uid="uid://3lethi1doos3" path="res://inventory/items/streetlight.tres" id="2_jsgvc"]
+[ext_resource type="Resource" uid="uid://358e0bmkobtl" path="res://inventory/items/stick.tres" id="2_vkxs4"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vkxs4"]
 load_path = "res://.godot/imported/Spritesheet_PlayerBase01a.png-11218e882df47f307ce7a7b63bad2ffd.ctex"
@@ -552,7 +552,7 @@ radius = 4.0
 
 [node name="enemie" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_qv21c")
-item = ExtResource("2_jsgvc")
+item = ExtResource("2_vkxs4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_053mo")
