@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dr24wbvghy2u4"]
 
 [ext_resource type="Script" uid="uid://cn1wcnjau87fq" path="res://script/stick_collectable.gd" id="1_m43rf"]
-[ext_resource type="Resource" uid="uid://dqiolhrlet6yd" path="res://inventory/items/coco.tres" id="2_nv3jk"]
+[ext_resource type="Resource" uid="uid://358e0bmkobtl" path="res://inventory/items/stick.tres" id="2_nv3jk"]
 [ext_resource type="Texture2D" uid="uid://dyh2c5xk0v5ie" path="res://AllTiles/png/stick-icon.png" id="3_nv3jk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gne4f"]
@@ -21,4 +21,4 @@ texture = ExtResource("3_nv3jk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 shape = SubResource("CapsuleShape2D_gne4f")
 
-[connection signal="body_entered" from="InteractArea" to="." method="_on_interacteble_area_body_entered"]
+[connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]
