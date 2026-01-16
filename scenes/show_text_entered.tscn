@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1o0aimus563t"]
+
+[sub_resource type="GDScript" id="GDScript_2brho"]
+script/source = "extends Node2D
+
+func _on_area_2d_body_entered(body: Node2D) -> void:"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2brho"]
+radius = 52.009613
+
+[node name="show_text_entered" type="Node2D"]
+script = SubResource("GDScript_2brho")
+text = null
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_2brho")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://divisjtksa2ic"]
+
+[ext_resource type="Script" uid="uid://bff3uw7gsd38y" path="res://inventory/inventory_item.gd" id="1_p0ixr"]
+[ext_resource type="Texture2D" uid="uid://cyfdt2ys2040g" path="res://AllTiles/png/caca.png" id="2_ujem6"]
+
+[resource]
+script = ExtResource("1_p0ixr")
+name = "caca"
+texture = ExtResource("2_ujem6")
+metadata/_custom_type_script = "uid://bff3uw7gsd38y"

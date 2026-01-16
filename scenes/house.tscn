@@ -1,12 +1,12 @@
 [gd_scene load_steps=20 format=4 uid="uid://de5gqavnidgdw"]
 
 [ext_resource type="Texture2D" uid="uid://bcocd0smom26n" path="res://AllTiles/png/block_terre2.png" id="1_3bgk5"]
-[ext_resource type="Script" uid="uid://cv24v8rhk0qnx" path="res://scenes/house.gd" id="1_ptc3g"]
+[ext_resource type="Script" uid="uid://cv24v8rhk0qnx" path="res://script/house.gd" id="1_ptc3g"]
 [ext_resource type="Texture2D" uid="uid://e1aul0xf1mxd" path="res://AllTiles/png/block_terre.png" id="2_f74lx"]
 [ext_resource type="Texture2D" uid="uid://cp5fajl28e4me" path="res://AllTiles/png/dirt_water.png" id="3_ptc3g"]
 [ext_resource type="Texture2D" uid="uid://ba522isqw7u2v" path="res://AllTiles/png/cube_orange.png" id="4_wcu0q"]
 [ext_resource type="Texture2D" uid="uid://bh3kfi12wmxxe" path="res://AllTiles/png/fence-with-flower.png" id="5_bwc8c"]
-[ext_resource type="PackedScene" uid="uid://bncnbri8loo6a" path="res://scenes/Player.tscn" id="6_f74lx"]
+[ext_resource type="PackedScene" uid="uid://bncnbri8loo6a" path="res://scenes/player.tscn" id="6_f74lx"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mhx8p"]
 load_path = "res://.godot/imported/Spritesheet_NatureFantasyAssetPackFree.png-663f384744117d7bc70dee5e9757ca42.ctex"

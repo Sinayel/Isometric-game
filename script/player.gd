@@ -8,13 +8,22 @@ extends CharacterBody2D
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var attack_area: Area2D = $AttackPivot/AttackArea
 @onready var attack_pivot: Node2D = $AttackPivot
+@onready var label: Label = $CenterContainer/Label
+@onready var label2: Label = $CenterContainer/Label2
 
 const speed := 60.0
 const sprint_speed := 80.0
 var is_attacking := false
 var last_dir: Vector2 = Vector2.RIGHT
 
+func set_hint_visible(show: bool, arg: int) -> void:
+	if label and arg == 0:
+		label.visible = show
+	if label2:
+		label2.visible = show
+
 func _ready() -> void:
+	label2.visible = false
 	anim.animation_finished.connect(_on_anim_finished)
 	attack_area.monitoring = false
 	attack_area.connect("body_entered", _on_attack_area_body_entered)
@@ -67,4 +76,5 @@ func _on_attack_area_body_entered(body: Node) -> void:
 		body.take_damage(self)
 
 func collect(item):
+	print("collect item")
 	inv.insert(item)

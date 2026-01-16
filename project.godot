@@ -16,10 +16,6 @@ config/features=PackedStringArray("4.5", "GL Compatibility")
 run/size/window_height_override=1080
 run/size/window_width_override=1920
 
-[autoload]
-
-Level="*res://script/level.gd"
-
 [display]
 
 window/stretch/mode="canvas_items"

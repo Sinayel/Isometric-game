@@ -1,10 +1,65 @@
-[gd_scene load_steps=62 format=3 uid="uid://bncnbri8loo6a"]
+[gd_scene load_steps=77 format=3 uid="uid://bncnbri8loo6a"]
 
 [ext_resource type="Script" uid="uid://c2mrqivrrkajf" path="res://script/player.gd" id="1_f56wh"]
-[ext_resource type="Resource" uid="uid://djiomtlv5rngl" path="res://inventory/playerinv.tres" id="2_a756b"]
+[ext_resource type="Script" uid="uid://dx8i03tijm8tg" path="res://script/Inventory/inventory.gd" id="2_fjrip"]
 [ext_resource type="Texture2D" uid="uid://defg8wquo4qwk" path="res://AllTiles/png/ANIM-resize.png" id="3_h4v8g"]
+[ext_resource type="Script" uid="uid://dljaehtrm45i7" path="res://script/Inventory/inv_slot.gd" id="3_smehm"]
 [ext_resource type="Texture2D" uid="uid://canw17sd6pv1" path="res://AllTiles/png/ANIM-Walk.png" id="4_bbery"]
 [ext_resource type="PackedScene" uid="uid://7tdibn0ckf7c" path="res://inventory/inv_ui.tscn" id="6_qv6ja"]
+[ext_resource type="FontFile" uid="uid://1ik7cy303bik" path="res://UpheavalPro.ttf" id="6_tuyoq"]
+
+[sub_resource type="Resource" id="Resource_fjrip"]
+script = ExtResource("3_smehm")
+metadata/_custom_type_script = "uid://dljaehtrm45i7"
+
+[sub_resource type="Resource" id="Resource_smehm"]
+script = ExtResource("3_smehm")
+metadata/_custom_type_script = "uid://dljaehtrm45i7"
+
+[sub_resource type="Resource" id="Resource_y4r1p"]
+script = ExtResource("3_smehm")
+metadata/_custom_type_script = "uid://dljaehtrm45i7"
+
+[sub_resource type="Resource" id="Resource_d2wvv"]
+script = ExtResource("3_smehm")
+metadata/_custom_type_script = "uid://dljaehtrm45i7"
+
+[sub_resource type="Resource" id="Resource_3v2ag"]
+script = ExtResource("3_smehm")
+metadata/_custom_type_script = "uid://dljaehtrm45i7"
+
+[sub_resource type="Resource" id="Resource_jej6c"]
+script = ExtResource("3_smehm")
+metadata/_custom_type_script = "uid://dljaehtrm45i7"
+
+[sub_resource type="Resource" id="Resource_f1ej7"]
+script = ExtResource("3_smehm")
+metadata/_custom_type_script = "uid://dljaehtrm45i7"
+
+[sub_resource type="Resource" id="Resource_oprun"]
+script = ExtResource("3_smehm")
+metadata/_custom_type_script = "uid://dljaehtrm45i7"
+
+[sub_resource type="Resource" id="Resource_a8ls1"]
+script = ExtResource("3_smehm")
+metadata/_custom_type_script = "uid://dljaehtrm45i7"
+
+[sub_resource type="Resource" id="Resource_qfm1y"]
+script = ExtResource("3_smehm")
+metadata/_custom_type_script = "uid://dljaehtrm45i7"
+
+[sub_resource type="Resource" id="Resource_fulsm"]
+script = ExtResource("3_smehm")
+metadata/_custom_type_script = "uid://dljaehtrm45i7"
+
+[sub_resource type="Resource" id="Resource_4r5pv"]
+script = ExtResource("3_smehm")
+metadata/_custom_type_script = "uid://dljaehtrm45i7"
+
+[sub_resource type="Resource" id="Resource_ur7pv"]
+script = ExtResource("2_fjrip")
+slots = Array[ExtResource("3_smehm")]([SubResource("Resource_fjrip"), SubResource("Resource_smehm"), SubResource("Resource_y4r1p"), SubResource("Resource_d2wvv"), SubResource("Resource_3v2ag"), SubResource("Resource_jej6c"), SubResource("Resource_f1ej7"), SubResource("Resource_oprun"), SubResource("Resource_a8ls1"), SubResource("Resource_qfm1y"), SubResource("Resource_fulsm"), SubResource("Resource_4r5pv")])
+metadata/_custom_type_script = "uid://dx8i03tijm8tg"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bbery"]
 atlas = ExtResource("3_h4v8g")
@@ -561,7 +616,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h4v8g"]
 radius = 2.9936254
-height = 5.987251
+height = 7.9830027
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ki1dg"]
 radius = 3.7478073
@@ -727,7 +782,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_f56wh")
-inv = ExtResource("2_a756b")
+inv = SubResource("Resource_ur7pv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, 0)
@@ -736,11 +791,11 @@ animation = &"walk_player"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 rotation = -0.41656113
-zoom = Vector2(3, 3)
+zoom = Vector2(2.5, 2.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.9181008e-09, -5.9604645e-08)
-rotation = -1.635999
+rotation = -3.0949183
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("CapsuleShape2D_h4v8g")
 
@@ -759,7 +814,35 @@ libraries = {
 }
 
 [node name="Inv_Ui" parent="." instance=ExtResource("6_qv6ja")]
-offset_left = -29.0
-offset_top = -61.0
-offset_right = 28.0
-offset_bottom = -19.0
+offset_left = -22.0
+offset_top = -44.0
+offset_right = 22.0
+offset_bottom = -10.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -57.0
+offset_right = 81.0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78431374, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_tuyoq")
+theme_override_font_sizes/font_size = 10
+text = "go to the big house
+at the end of the village"
+
+[node name="Label2" type="Label" parent="CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78431374, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_tuyoq")
+theme_override_font_sizes/font_size = 10
+text = "Collect all the
+Sticks and kill all enemies !
+Come after"

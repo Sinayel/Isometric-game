@@ -5,18 +5,18 @@
 [ext_resource type="PackedScene" uid="uid://dnc3k3gmmd7hh" path="res://inventory/inv_ui_slot.tscn" id="3_dn3an"]
 
 [node name="Inv_Ui" type="Control"]
-custom_minimum_size = Vector2(40, 40)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 57.0
-offset_bottom = 40.0
+offset_right = 44.0
+offset_bottom = 34.0
 script = ExtResource("1_f2u1w")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 57.0
-offset_bottom = 42.0
+offset_right = 44.0
+offset_bottom = 34.0
 texture = ExtResource("2_w82yi")
+region_rect = Rect2(0, 0, 16, 16)
 patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
@@ -29,12 +29,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -22.0
-offset_top = -16.0
-offset_right = 22.0
-offset_bottom = 16.0
+offset_left = -19.0
+offset_top = -14.0
+offset_right = 19.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
 columns = 4
 
 [node name="inv_UI_slot1" parent="NinePatchRect/GridContainer" instance=ExtResource("3_dn3an")]

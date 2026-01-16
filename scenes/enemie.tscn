@@ -1,7 +1,7 @@
 [gd_scene load_steps=77 format=3 uid="uid://2bga7wu1e6u1"]
 
 [ext_resource type="Script" uid="uid://clegnf7mwguhu" path="res://script/enemie.gd" id="1_qv21c"]
-[ext_resource type="Resource" uid="uid://358e0bmkobtl" path="res://inventory/items/stick.tres" id="2_vkxs4"]
+[ext_resource type="Resource" uid="uid://divisjtksa2ic" path="res://inventory/items/new_item.tres" id="2_vkxs4"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vkxs4"]
 load_path = "res://.godot/imported/Spritesheet_PlayerBase01a.png-11218e882df47f307ce7a7b63bad2ffd.ctex"

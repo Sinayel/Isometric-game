@@ -2,6 +2,7 @@ extends Control
 
 @onready var inv: Inv = preload("res://inventory/playerinv.tres")
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
+@onready var panel_slot0 = $NinePatchRect/GridContainer/inv_UI_slot1
 
 var is_open = false
 
