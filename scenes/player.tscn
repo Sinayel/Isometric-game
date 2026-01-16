@@ -759,20 +759,13 @@ libraries = {
 &"": SubResource("AnimationLibrary_a756b")
 }
 
-[node name="Inv_Ui" parent="." instance=ExtResource("6_qv6ja")]
-offset_left = -22.0
-offset_top = -44.0
-offset_right = 22.0
-offset_bottom = -10.0
-
 [node name="CenterContainer" type="CenterContainer" parent="."]
-visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = -57.0
 offset_top = -57.0
-offset_right = 81.0
+offset_right = 95.0
 grow_vertical = 0
 
 [node name="Label" type="Label" parent="CenterContainer"]
@@ -793,3 +786,9 @@ theme_override_font_sizes/font_size = 10
 text = "Collect all the
 Sticks and kill all enemies !
 Come after"
+
+[node name="Inv_Ui" parent="." instance=ExtResource("6_qv6ja")]
+offset_left = -22.0
+offset_top = -44.0
+offset_right = 22.0
+offset_bottom = -10.0

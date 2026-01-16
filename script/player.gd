@@ -55,7 +55,6 @@ func _physics_process(_delta: float) -> void:
 			anim.flip_h = true
 			attack_pivot.scale.x = -1
 		
-		
 		if !anim.is_playing() or anim.animation != 'walk_player':
 			anim.play('walk_player')
 	else:

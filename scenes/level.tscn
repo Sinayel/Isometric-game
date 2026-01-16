@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://3t2t607sstg6"]
+[gd_scene load_steps=10 format=3 uid="uid://3t2t607sstg6"]
 
 [ext_resource type="Script" uid="uid://bpfxvdce2d0pq" path="res://script/level.gd" id="1_8c41q"]
 [ext_resource type="PackedScene" uid="uid://pvy7qcpwkw65" path="res://scenes/world.tscn" id="1_ho4o2"]
@@ -8,8 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://2bga7wu1e6u1" path="res://scenes/enemie.tscn" id="5_f8a81"]
 [ext_resource type="PackedScene" uid="uid://dr24wbvghy2u4" path="res://scenes/stick_collectable.tscn" id="6_2r41h"]
 [ext_resource type="PackedScene" uid="uid://b3l5u4f4ad5go" path="res://scenes/cloud.tscn" id="7_klq6b"]
-[ext_resource type="Resource" uid="uid://358e0bmkobtl" path="res://inventory/items/stick.tres" id="8_8iemx"]
-[ext_resource type="Resource" uid="uid://divisjtksa2ic" path="res://inventory/items/new_item.tres" id="8_t1rx8"]
 [ext_resource type="PackedScene" uid="uid://bx0njdt54v2ui" path="res://scenes/show_text.tscn" id="10_olg7q"]
 
 [node name="Level" type="Node2D"]
@@ -80,14 +78,18 @@ position = Vector2(9, 51)
 
 [node name="stick_collectable2" parent="AllStick" instance=ExtResource("6_2r41h")]
 position = Vector2(28, 10)
-item = ExtResource("8_8iemx")
 
 [node name="stick_collectable5" parent="AllStick" instance=ExtResource("6_2r41h")]
 position = Vector2(-86, -1)
-item = ExtResource("8_t1rx8")
 
 [node name="stick_collectable6" parent="AllStick" instance=ExtResource("6_2r41h")]
 position = Vector2(-14, 93)
+
+[node name="stick_collectable7" parent="AllStick" instance=ExtResource("6_2r41h")]
+position = Vector2(-32, -5)
+
+[node name="stick_collectable8" parent="AllStick" instance=ExtResource("6_2r41h")]
+position = Vector2(-38, 37)
 
 [node name="AllCloud" type="Node2D" parent="."]
 rotation = 0.007241618
