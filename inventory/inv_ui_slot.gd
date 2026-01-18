@@ -21,8 +21,11 @@ func update(slot: InvSlot):
 	if slot.amount > 1:
 		amount_text.visible = true
 		amount_text.text = str(slot.amount)
+		print("slot amount = " + str(slot.amount))
 	elif slot.amount < 1:
 		item_visual.visible = false
+		amount_text.visible = false
+	elif slot.amount == 1:
 		amount_text.visible = false
 
 func _gui_input(event: InputEvent) -> void:

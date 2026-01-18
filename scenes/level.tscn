@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://3t2t607sstg6"]
+[gd_scene load_steps=12 format=3 uid="uid://3t2t607sstg6"]
 
 [ext_resource type="Script" uid="uid://bpfxvdce2d0pq" path="res://script/level.gd" id="1_8c41q"]
 [ext_resource type="PackedScene" uid="uid://pvy7qcpwkw65" path="res://scenes/world.tscn" id="1_ho4o2"]
@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dsu4tmiikosaw" path="res://scenes/streelight.tscn" id="4_cib7u"]
 [ext_resource type="PackedScene" uid="uid://2bga7wu1e6u1" path="res://scenes/enemie.tscn" id="5_f8a81"]
 [ext_resource type="PackedScene" uid="uid://dr24wbvghy2u4" path="res://scenes/stick_collectable.tscn" id="6_2r41h"]
-[ext_resource type="PackedScene" uid="uid://b3l5u4f4ad5go" path="res://scenes/cloud.tscn" id="7_klq6b"]
+[ext_resource type="PackedScene" uid="uid://da6ja6ebewi6n" path="res://scenes/maison_1.tscn" id="9_8c41q"]
+[ext_resource type="PackedScene" uid="uid://1fk7ica5yt1x" path="res://scenes/maison_2.tscn" id="9_t1rx8"]
+[ext_resource type="PackedScene" uid="uid://bw0eo3vkbw7c6" path="res://scenes/shop.tscn" id="10_8iemx"]
 [ext_resource type="PackedScene" uid="uid://bx0njdt54v2ui" path="res://scenes/show_text.tscn" id="10_olg7q"]
 
 [node name="Level" type="Node2D"]
@@ -24,174 +26,107 @@ offset_bottom = 540.0
 color = Color(0.51836956, 0.7976974, 0.9976602, 1)
 metadata/_edit_lock_ = true
 
+[node name="Player" parent="." instance=ExtResource("2_f8a81")]
+position = Vector2(-86, 78)
+
 [node name="World" parent="." instance=ExtResource("1_ho4o2")]
 z_index = -1
 position = Vector2(-50, -9)
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." instance=ExtResource("2_f8a81")]
-position = Vector2(-77, 64)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World"]
+position = Vector2(0.19999695, 0.69999695)
+polygon = PackedVector2Array(100, -140, 106, -142, 105, -146, 116, -150, 118, -148, 121, -149, 136, -141, 160, -153, 160, -171, 156, -173, 150, -175, 146, -183, 140, -189, 128, -189, 123, -188, 115, -186, 105, -183, 102, -181, 101, -178, 92, -176, 86, -174, 85, -172, 79, -169, 77, -168, 77, -158, 76, -152)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="World"]
+position = Vector2(0.19999695, 0.69999695)
+polygon = PackedVector2Array(-7, -46, -7, -64, -3, -64, -2, -63, 17, -72, 19, -78, 22, -76, 23, -58, 18, -58, 14, -59, 1, -52, 2, -48, -1, -45)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="World"]
+position = Vector2(112.2, 90.7)
+polygon = PackedVector2Array(-7, -46, -7, -64, -3, -64, -2, -63, 17, -72, 19, -78, 22, -76, 23, -58, 18, -58, 14, -59, 1, -52, 2, -48, -1, -45)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="World"]
+position = Vector2(0.19999695, 0.69999695)
+polygon = PackedVector2Array(-96, 91, -97, 89, -95, 87, -94, 72, -89, 71, -89, 75, -70, 84, -65, 84, -65, 96, -63, 94, -63, 98, -66, 100, -65, 102, -71, 103, -74, 100, -74, 96, -89, 88, -90, 91)
 
 [node name="AllEnnemies" type="Node2D" parent="."]
 
 [node name="enemie" parent="AllEnnemies" instance=ExtResource("5_f8a81")]
 y_sort_enabled = true
-position = Vector2(32, -49)
+position = Vector2(5, -121)
 
 [node name="enemie3" parent="AllEnnemies" instance=ExtResource("5_f8a81")]
-position = Vector2(3, 42)
+position = Vector2(111, 11)
 
 [node name="enemie4" parent="AllEnnemies" instance=ExtResource("5_f8a81")]
-position = Vector2(51, -82)
+position = Vector2(67, -109)
 
 [node name="enemie2" parent="AllEnnemies" instance=ExtResource("5_f8a81")]
-position = Vector2(82, -60)
+position = Vector2(-55, -32)
 
 [node name="AllTree" type="Node2D" parent="."]
 y_sort_enabled = true
 
 [node name="Tree3" parent="AllTree" instance=ExtResource("3_kaip4")]
-position = Vector2(103, -40)
+position = Vector2(110, -69)
 
 [node name="Tree4" parent="AllTree" instance=ExtResource("3_kaip4")]
-position = Vector2(78, 4)
+position = Vector2(0, 1)
 
 [node name="Tree5" parent="AllTree" instance=ExtResource("3_kaip4")]
-position = Vector2(26, 66)
+position = Vector2(-156, 58)
 
 [node name="Tree6" parent="AllTree" instance=ExtResource("3_kaip4")]
-position = Vector2(96, -132)
+position = Vector2(-41, -102)
 
 [node name="Tree7" parent="AllTree" instance=ExtResource("3_kaip4")]
-position = Vector2(87, -89)
-
-[node name="AllStreetlight" type="Node2D" parent="."]
-y_sort_enabled = true
-
-[node name="Streelight3" parent="AllStreetlight" instance=ExtResource("4_cib7u")]
-position = Vector2(28, -83)
-
-[node name="Streelight4" parent="AllStreetlight" instance=ExtResource("4_cib7u")]
-position = Vector2(9, 51)
+position = Vector2(158, -155)
 
 [node name="AllStick" type="Node2D" parent="."]
 
 [node name="stick_collectable2" parent="AllStick" instance=ExtResource("6_2r41h")]
-position = Vector2(28, 10)
+position = Vector2(134, -61)
 
 [node name="stick_collectable5" parent="AllStick" instance=ExtResource("6_2r41h")]
-position = Vector2(-86, -1)
+position = Vector2(-78, 7)
 
 [node name="stick_collectable6" parent="AllStick" instance=ExtResource("6_2r41h")]
-position = Vector2(-14, 93)
+position = Vector2(56, 51)
 
 [node name="stick_collectable7" parent="AllStick" instance=ExtResource("6_2r41h")]
-position = Vector2(-32, -5)
+position = Vector2(-81, -67)
 
-[node name="stick_collectable8" parent="AllStick" instance=ExtResource("6_2r41h")]
-position = Vector2(-38, 37)
+[node name="AllStreetlight" type="Node2D" parent="."]
+y_sort_enabled = true
+position = Vector2(48, 19)
 
-[node name="AllCloud" type="Node2D" parent="."]
-rotation = 0.007241618
+[node name="Streelight3" parent="AllStreetlight" instance=ExtResource("4_cib7u")]
+position = Vector2(-33, -73)
 
-[node name="cloud" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(296.0212, 1.8563957)
-rotation = -0.04558249
+[node name="Streelight4" parent="AllStreetlight" instance=ExtResource("4_cib7u")]
+position = Vector2(-87, 33)
 
-[node name="cloud3" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(342.71524, 97.520775)
-rotation = 0.11279319
+[node name="Batiment" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="cloud4" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-153.32782, -320.89807)
-rotation = -0.06800714
+[node name="maison2" parent="Batiment" instance=ExtResource("9_8c41q")]
+position = Vector2(-110, -65)
 
-[node name="cloud11" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-470.3557, -323.60242)
-rotation = 0.14594832
+[node name="maison3" parent="Batiment" instance=ExtResource("9_t1rx8")]
+position = Vector2(140, -43)
 
-[node name="cloud12" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(229.72006, -315.67175)
-rotation = 0.13655643
+[node name="maison4" parent="Batiment" instance=ExtResource("9_t1rx8")]
+position = Vector2(140, -43)
 
-[node name="cloud13" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-26.106659, -290.8186)
-rotation = 0.08908851
+[node name="shop" parent="Batiment" instance=ExtResource("10_8iemx")]
+position = Vector2(-76, -222)
 
-[node name="cloud14" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(315.8475, -160.29141)
-rotation = -0.10558374
-
-[node name="cloud5" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-156.93666, -266.87054)
-rotation = 0.11927236
-
-[node name="cloud15" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-478.84918, -115.535416)
-rotation = -0.10502491
-
-[node name="cloud16" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-293, -51)
-rotation = 0.306425
-
-[node name="cloud17" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-284.65024, -364.94824)
-rotation = 0.15064707
-
-[node name="cloud18" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-343.64337, 50.489822)
-rotation = 0.15064707
-
-[node name="cloud19" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-483.84244, 23.504381)
-rotation = 0.15064707
-
-[node name="cloud20" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-130.56996, 197.95071)
-rotation = 0.15064707
-
-[node name="cloud21" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(305.65033, 226.79257)
-rotation = 0.15064707
-
-[node name="cloud22" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(357.4837, -72.59062)
-rotation = 0.15064707
-
-[node name="cloud23" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(311.13074, -259.25986)
-rotation = 0.15064707
-
-[node name="cloud24" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(112, -321)
-
-[node name="cloud25" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-23.838135, -391.83762)
-rotation = 0.019362252
-
-[node name="cloud6" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-352.39563, -191.4531)
-rotation = -0.13159671
-
-[node name="cloud7" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-244.13246, 258.7747)
-
-[node name="cloud9" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(69.01139, 277.50757)
-rotation = -0.107594416
-
-[node name="cloud10" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(131.55353, 214.05295)
-rotation = 0.09952068
-
-[node name="cloud8" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(-428.68524, 183.10916)
-
-[node name="cloud2" parent="AllCloud" instance=ExtResource("7_klq6b")]
-position = Vector2(156, -70)
+[node name="maison1" parent="Batiment" instance=ExtResource("9_8c41q")]
+position = Vector2(102, 41)
 
 [node name="show_text" parent="." instance=ExtResource("10_olg7q")]
-position = Vector2(-79, 65)
+position = Vector2(5, 100)
 
 [node name="show_text2" parent="." instance=ExtResource("10_olg7q")]
 position = Vector2(60, -158)

@@ -10,6 +10,7 @@ extends CharacterBody2D
 @onready var attack_pivot: Node2D = $AttackPivot
 @onready var label: Label = $CenterContainer/Label
 @onready var label2: Label = $CenterContainer/Label2
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
 const speed := 60.0
 const sprint_speed := 80.0
@@ -24,6 +25,7 @@ func set_hint_visible(show: bool, arg: int) -> void:
 
 func _ready() -> void:
 	label2.visible = false
+
 	anim.animation_finished.connect(_on_anim_finished)
 	attack_area.monitoring = false
 	attack_area.connect("body_entered", _on_attack_area_body_entered)
@@ -39,6 +41,7 @@ func _physics_process(_delta: float) -> void:
 		anim_player.play("attack")
 		attack_area.monitoring = true
 		return
+
 	if Input.is_action_pressed("sprint"):
 		current_speed = sprint_speed
 	

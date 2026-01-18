@@ -562,11 +562,11 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h4v8g"]
 radius = 2.9936254
-height = 7.9830027
+height = 6.386401
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ki1dg"]
-radius = 3.7478073
-height = 7.4956145
+radius = 2.9993196
+height = 6.0412397
 
 [sub_resource type="Animation" id="Animation_bbery"]
 length = 0.001
@@ -589,10 +589,10 @@ tracks/1/path = NodePath("AttackPivot/AttackArea/CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.0009999999),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-1.4305115e-06, 9.536743e-07), Vector2(0, 0)]
+"values": [Vector2(0, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -640,7 +640,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1.9181008e-09, -5.9604645e-08)]
+"values": [Vector2(-1, 5)]
 }
 
 [sub_resource type="Animation" id="Animation_h4v8g"]
@@ -711,13 +711,13 @@ tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/path = NodePath("CollisionShape2D:position")
-tracks/5/interp = 0
+tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.046707988, 0.19545357, 0.4579603),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1.9181008e-09, -5.9604645e-08), Vector2(2.0000002, -2.0000002), Vector2(-3.5762787e-07, 4.000001), Vector2(5.71859e-10, 4.0000005)]
+"values": [Vector2(-1, 5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a756b"]
@@ -740,8 +740,8 @@ rotation = -0.41656113
 zoom = Vector2(2.5, 2.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.9181008e-09, -5.9604645e-08)
-rotation = -3.0949183
+position = Vector2(-1, 5)
+rotation = -3.036528
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("CapsuleShape2D_h4v8g")
 
@@ -750,7 +750,6 @@ shape = SubResource("CapsuleShape2D_h4v8g")
 [node name="AttackArea" type="Area2D" parent="AttackPivot"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackPivot/AttackArea"]
-position = Vector2(-1.4305115e-06, 9.536743e-07)
 rotation = -0.021302491
 shape = SubResource("CapsuleShape2D_ki1dg")
 

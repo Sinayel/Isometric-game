@@ -2,8 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bciobgp768vvc" path="res://AllTiles/png/tree.png" id="1_brfkd"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_uc1xx"]
-radius = 6.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
+radius = 6.697304
+height = 20.0
 
 [node name="Tree" type="StaticBody2D"]
 
@@ -14,5 +15,5 @@ scale = Vector2(1.0094593, 1.114928)
 texture = ExtResource("1_brfkd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.30269623, 0)
-shape = SubResource("CircleShape2D_uc1xx")
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_avsvi")

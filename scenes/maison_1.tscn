@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://da6ja6ebewi6n"]
+
+[ext_resource type="Texture2D" uid="uid://iy6jyygtg4hu" path="res://AllTiles/png/maison1.png" id="1_vvwt8"]
+
+[node name="maison1" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vvwt8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-31, 11, -32, 27, -8, 39, 26, 23, 26, 20, 32, 18, 30, 10, 20, 1, 9, -7, -8, -2, -26, 5)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw0eo3vkbw7c6"]
+
+[ext_resource type="Texture2D" uid="uid://cqkoj63wwsi2p" path="res://AllTiles/png/shop.png" id="1_lx5au"]
+
+[node name="shop" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 12)
+scale = Vector2(1.1328125, 1.0820313)
+texture = ExtResource("1_lx5au")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-32, 70, -7, 81, 30, 64, 30, 49, 26, 45, 19, 42, 12, 43, 2, 43, -9, 44, -20, 47, -29, 50, -32, 57)

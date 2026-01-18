@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://xb3uyd3ds33m"]
+
+[ext_resource type="Texture2D" uid="uid://dcx4f4ypa0iyk" path="res://AllTiles/png/pillier.png" id="1_no2yi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xbql5"]
+radius = 7.0
+height = 33.99972
+
+[node name="pillier" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_no2yi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.7252903e-09, 13.000001)
+rotation = 3.137531
+shape = SubResource("CapsuleShape2D_xbql5")

@@ -7,5 +7,5 @@
 script = ExtResource("1_b46qi")
 name = "stick"
 texture = ExtResource("2_b46qi")
-stackable = false
+max_stack = 100
 metadata/_custom_type_script = "uid://bff3uw7gsd38y"
